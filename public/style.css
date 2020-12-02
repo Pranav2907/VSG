@@ -6,14 +6,14 @@ body, html {
 
 
 #video-grid{
-    display:flex;
+    display:-ms-inline-grid;
     justify-content: center;
 
 }
 video{
-    height:150px;
-    width:250px;
-    object-fit: cover;
+    border: 1px solid #999;
+    width: 98%;
+    max-width: 860px;
 }
 
 .main {
@@ -97,3 +97,13 @@ video{
 .unmute  {
     color: #CC3B33;
 }
+a {
+    color:#00796b;
+}
+a:visited {
+    color: #00796b;
+  }
+  a:link {
+    text-decoration: none;
+  }  
+  
