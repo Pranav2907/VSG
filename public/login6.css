@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(https://wallpapercave.com/wp/wp5181541.jpg);
+    font-size: 16px;
+    color: #777;
+    font-family: sans-serif;
+    font-weight: 300;
+  }
+  
+  #login-box{
+    position: relative;
+    margin: 10% auto;
+    height: 400px;
+    width: 600px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  }
+  
+  .left-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: #434040;
+    background-image: url(https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+  }
+  
+  h1{
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    font-size: 28px;
+  }
+  
+  input[type="text"],
+  input[type="password"]
+  {
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 4px;
+    width: 220px;
+    height: 32px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #aaa;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+  }
+  
+  button[id="register"]
+  {
+    margin-bottom: 28px;
+    width: 120px;
+    height: 32px;
+    background: #434040;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+  
+  button[id="register"]:hover,
+  button[id="register"]:focus
+  {
+    background: #747280;
+    transition: 0.2s ease;
+  }
+  button[id="login"]
+  {
+    margin-bottom: 28px;
+    width: 120px;
+    height: 32px;
+    background: #6825a5;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+  
+  button[id="login"]:hover,
+  button[id="login"]:focus
+  {
+    background: #8843ab;
+    transition: 0.2s ease;
+  }
+  
+  .right-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    background-image: url(https://www.itl.cat/pngfile/big/44-449621_dark-purple-and-black-abstract-dark-purple-background.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .or{
+    position: absolute;
+    top: 180px;
+    left: 280px;
+    width: 40px;
+    height: 40px;
+    background: #efefef;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    line-height: 40px;
+    text-align: center; 
+  }
+  
