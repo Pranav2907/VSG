@@ -20,19 +20,6 @@ app.get("/room/new", (req, res) => {
 	res.redirect(`/${uuidv4()}`);
 });
 
-
-
-  
-io.on('connection', socket => {
-    socket.on('join-room' ,( roomId , userId) => {
-       socket.join(roomId);
-       socket.to(roomId).broadcast.emit('user-connected',userId );
-       socket.on('message', message => {
-           io.to(roomId).emit('createMessage', message)
-       });
-       
-
-    });
 app.get("/:room", (req, res) => {
 	res.render("room", { roomId: req.params.room });
 });
@@ -45,8 +32,16 @@ io.on("connection", (socket) => {
 			io.to(roomId).emit("createMessage", message);
 		});
 	});
-});
 
+	io.on("connection", (socket) => {
+		socket.on("join-room", (roomId, userId) => {
+			socket.join(roomId);
+			socket.to(roomId).broadcast.emit("user-connected", userId);
+			socket.on("message", (message) => {
+				io.to(roomId).emit("createMessage", message);
+			});
+		});
+	});
 
-  server.listen(process.env.PORT||3030);
+	server.listen(process.env.PORT || 3030);
 });
