@@ -22,6 +22,9 @@ app.get('/', (req, res) => {
 app.get('/:room', (req,res )  =>{
     res.render('room', { roomId: req.params.room });
 })
+app.get('/', (req, res) => {
+    res.render('index');
+}) 
   
 io.on('connection', socket => {
     socket.on('join-room' ,( roomId , userId) => {
@@ -34,9 +37,7 @@ io.on('connection', socket => {
 
     })
 })
-app.get('/', (req, res) => {
-    res.render('index');
-}) 
+
 
 
 
