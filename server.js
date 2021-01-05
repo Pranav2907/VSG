@@ -7,7 +7,10 @@ const { ExpressPeerServer } = require('peer');
 const peerServer = ExpressPeerServer(server, {
     debug: true
 });
-
+app.get('/', (req, res) => {
+    res.render('index');
+});
+   
 const { v4: uuidv4 } = require('uuid');
 app.use('/peerjs',peerServer);
 app.set('view engine','ejs');
@@ -17,7 +20,6 @@ app.get('/', (req, res) => {
     res.redirect(`/${uuidv4()}`);
 });
 
-   
 
 app.get('/:room', (req,res )  =>{
     res.render('room', { roomId: req.params.room });
