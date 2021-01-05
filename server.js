@@ -16,9 +16,7 @@ app.use(express.static('public'));
 app.get('/', (req, res) => {
     res.redirect(`/${uuidv4()}`);
 });
-app.get('/', (req, res) => {
-    res.render('index');
-}) ;
+
    
 
 app.get('/:room', (req,res )  =>{
