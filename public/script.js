@@ -154,8 +154,3 @@ async function startCapture() {
 		console.error("Error: " + err);
 	}
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 897a6816935e223b2f319d8000259f8f655b4c50
