@@ -7,9 +7,11 @@ const { ExpressPeerServer } = require('peer');
 const peerServer = ExpressPeerServer(server, {
     debug: true
 });
+
 app.get('/', (req, res) => {
     res.render('index');
 });
+
    
 const { v4: uuidv4 } = require('uuid');
 app.use('/peerjs',peerServer);
@@ -26,6 +28,7 @@ app.get('/:room', (req,res )  =>{
 });
 
 
+
   
 io.on('connection', socket => {
     socket.on('join-room' ,( roomId , userId) => {
@@ -38,7 +41,6 @@ io.on('connection', socket => {
 
     });
 });
-
 
 
 
